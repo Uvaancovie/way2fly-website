@@ -1,35 +1,51 @@
 /* styles/DarkTheme.module.css */
-:root {
+.theme-dark {
   --background-color: #000000;
   --text-color: #ffffff;
   --primary-color: #1e90ff; /* Light blue */
 }
 
-body {
+.theme-dark {
   background-color: var(--background-color);
   color: var(--text-color);
 }
 
-a {
+.theme-dark a {
   color: var(--primary-color);
 }
 
-.container {
+.theme-dark .container {
   padding: 20px;
   background-color: var(--background-color);
   color: var(--text-color);
 }
 
-.header {
+.theme-dark .header {
   background-color: var(--primary-color);
   color: var(--background-color);
   padding: 10px;
   text-align: center;
 }
 
-.footer {
+.theme-dark .footer {
   background-color: var(--primary-color);
   color: var(--background-color);
   padding: 10px;
   text-align: center;
+}
+
+.theme-dark nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.theme-dark nav ul li {
+  margin: 0 10px;
+}
+
+.theme-dark nav ul li a {
+  color: var(--background-color);
+  text-decoration: none;
 }

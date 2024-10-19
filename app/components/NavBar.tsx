@@ -1,17 +1,18 @@
 import React from 'react';
-import styles from '../styles/DarkTheme.module.css';
+import { motion } from 'framer-motion';
+import { NavigationMenu } from '@/components/ui/navigation-menu';
 
-const Navbar = () => {
+const NavBar = () => {
   return (
-    <nav className={styles.header}>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
+    <motion.nav
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="bg-black text-white p-4"
+    >
+      <NavigationMenu />
+    </motion.nav>
   );
 };
 
-export default Navbar;
+export default NavBar;
