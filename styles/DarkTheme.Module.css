@@ -1,0 +1,35 @@
+/* styles/DarkTheme.module.css */
+:root {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --primary-color: #1e90ff; /* Light blue */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--primary-color);
+}
+
+.container {
+  padding: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.header {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 10px;
+  text-align: center;
+}
+
+.footer {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 10px;
+  text-align: center;
+}
