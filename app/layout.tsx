@@ -1,5 +1,4 @@
-
-import '../app/globals.css'
+import '../styles/globals.css'; // Correct relative path
 
 export default function RootLayout({
   children,
@@ -9,9 +8,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-gray-900 text-gray-200">
-      
         {children}
       </body>
     </html>
-  )
+  );
 }
