@@ -3,6 +3,7 @@
 import React from 'react';
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent, NavigationMenuLink } from '@/components/ui/navigation-menu';
 import HeroSection from './components/HeroSection';
+import PortfolioPreview from './components/PortfolioPreview';
 // Ensure this path is correct
 
 export default function Page() {
@@ -25,6 +26,10 @@ export default function Page() {
         <h1>Welcome to My Portfolio</h1>
         <p>This is the landing page of my portfolio.</p>
         <HeroSection/>
+
+
+        
+        <PortfolioPreview/>
       </div>
     </div>
   );
