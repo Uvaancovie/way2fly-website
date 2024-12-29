@@ -1,53 +1,96 @@
 import React from 'react';
-import { FaDatabase, FaReact,  } from 'react-icons/fa';
-import { SiNextdotjs, SiTypescript, SiPrisma, SiMongodb, SiMicrosoftazure, SiDotnet } from 'react-icons/si';
 
 const ExpertiseSection = () => {
   const technologies = [
     {
-      icon: <SiMongodb className="w-12 h-12" />,
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="8"/>
+          <path d="M9 9a3 3 0 0 1 6 0c0 2-3 3-3 3"/>
+          <line x1="12" y1="17" x2="12" y2="17"/>
+        </svg>
+      ),
       title: "MongoDB",
       description: "NoSQL database for scalable, high-performance applications",
       color: "from-green-400 to-green-600"
     },
     {
-      icon: <FaDatabase className="w-12 h-12" />,
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+        </svg>
+      ),
       title: "SQL",
       description: "Relational database expertise in data modeling and management",
       color: "from-blue-400 to-blue-600"
     },
     {
-      icon: <SiNextdotjs className="w-12 h-12" />,
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+          <path d="M2 17l10 5 10-5"/>
+          <path d="M2 12l10 5 10-5"/>
+        </svg>
+      ),
       title: "Next.js",
       description: "Server-rendered React framework for optimized web applications",
       color: "from-gray-400 to-gray-600"
     },
     {
-      icon: <SiDotnet className="w-12 h-12" />,
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M18 10h-4v4h4v-4z"/>
+          <path d="M22 10h-4v4h4v-4z"/>
+          <path d="M6 10H2v4h4v-4z"/>
+          <path d="M10 10H6v4h4v-4z"/>
+          <path d="M14 10h-4v4h4v-4z"/>
+        </svg>
+      ),
       title: "ASP.NET Core",
       description: "Cross-platform framework for building secure, scalable apps",
       color: "from-purple-400 to-purple-600"
     },
     {
-      icon: <SiMicrosoftazure className="w-12 h-12" />,
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+          <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      ),
       title: "Azure Cloud",
       description: "Cloud services for hosting, managing, and scaling applications",
       color: "from-blue-400 to-blue-600"
     },
     {
-      icon: <SiPrisma className="w-12 h-12" />,
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      ),
       title: "Prisma ORM",
       description: "Database toolkit for type-safe SQL management in JavaScript",
       color: "from-indigo-400 to-indigo-600"
     },
     {
-      icon: <FaReact className="w-12 h-12" />,
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M16.2 7.8l-2 6.3-6.4 2.1 2-6.3z"/>
+        </svg>
+      ),
       title: "React",
       description: "Component-based UI library for interactive user interfaces",
       color: "from-cyan-400 to-cyan-600"
     },
     {
-      icon: <SiTypescript className="w-12 h-12" />,
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect x="2" y="9" width="4" height="12"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+      ),
       title: "TypeScript",
       description: "Typed superset of JavaScript for robust application development",
       color: "from-blue-400 to-blue-600"
