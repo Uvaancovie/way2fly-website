@@ -54,6 +54,15 @@ const Navbar = () => {
             >
               Let Talk
             </Link>
+
+            <Link
+              href="/blog"
+              className="px-4 py-2 rounded-full text-sm font-medium
+                bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600
+                transform hover:scale-105 transition-all duration-300"
+            >
+              Blog
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
