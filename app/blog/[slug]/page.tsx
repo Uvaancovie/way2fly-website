@@ -1,14 +1,29 @@
 import { createClient } from "next-sanity";
 
-
+// Initialize the Sanity client
 const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
   useCdn: true,
   apiVersion: "2023-01-01",
 });
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+// Generate static parameters for each blog post
+export async function generateStaticParams() {
+  const query = `*[_type == "post"]{ slug }`;
+  const slugs = await client.fetch(query);
+
+  return slugs.map((post: { slug: { current: string } }) => ({
+    slug: post.slug.current,
+  }));
+}
+
+// Blog post page component
+export default async function BlogPostPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const postQuery = `*[_type == "post" && slug.current == $slug][0]{
     title,
     body,
@@ -33,7 +48,10 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           className="w-full h-60 object-cover rounded-lg my-4"
         />
       )}
-      <div className="prose max-w-none">{/* Render body content here */}</div>
+      <div className="prose max-w-none">
+        {/* Render body content here */}
+        {post.body}
+      </div>
     </div>
   );
 }
